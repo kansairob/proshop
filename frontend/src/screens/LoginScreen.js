@@ -13,7 +13,7 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('')
 
     const location = useLocation()
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     const dispatch = useDispatch()
 
@@ -24,9 +24,9 @@ const LoginScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            history(redirect)
+            navigate(redirect)
         }
-    }, [history, userInfo, redirect])
+    }, [navigate, userInfo, redirect])
 
     const submitHandler = (e) => {
         e.preventDefault()
